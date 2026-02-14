@@ -3,15 +3,43 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Edammura Software Consultant</title>
+    <meta name="description" content="Edammura Software Consultant - Solusi terpercaya untuk transformasi digital bisnis Anda">
+    <meta name="keywords" content="software consultant, web development, mobile app, digital transformation">
+    <meta name="author" content="Edammura Software Consultant">
+    <title>Edammura Software Consultant - Transformasi Digital Terpercaya</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    
+    <!-- Animate CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
-  <body class="body">
+<body class="body">
+
+<!-- Preloader -->
+<div class="preloader">
+    <div class="preloader-content">
+        <div class="spinner"></div>
+        <p class="preloader-text">Loading...</p>
+    </div>
+</div>
+
+<!-- Scroll Progress Bar -->
+<div id="scrollProgress"></div>
 
 <!-- Navigation dengan efek sticky dan scroll interaktif -->
 <nav class="navbar navbar-expand-lg fixed-top navbar-scroll" id="mainNav">
@@ -41,10 +69,19 @@
           <a class="nav-link fw-bold" href="#produk">Produk</a>
         </li>
         <li class="nav-item">
+          <a class="nav-link fw-bold" href="#portfolio">Portfolio</a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link fw-bold" href="#tim">Tim</a>
         </li>
         <li class="nav-item">
+          <a class="nav-link fw-bold" href="#testimoni">Testimoni</a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link fw-bold" href="#blog">Blog</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fw-bold" href="#faq">FAQ</a>
         </li>
         <li class="nav-item">
           <a class="nav-link fw-bold" href="#kontak">Kontak</a>
@@ -96,6 +133,38 @@
           </div>
         </div>
         <a href="#kontak" class="fw-bold fs-6 text-dark smooth-scroll hover-link">Lebih Lanjut Tentang Kami →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Stats Section dengan Counter Animation -->
+<section class="stats-section py-5">
+  <div class="container py-4">
+    <div class="row text-center">
+      <div class="col-lg-3 col-md-6 mb-4 mb-lg-0 scroll-reveal" data-delay="0">
+        <div class="stat-box">
+          <h2 class="counter" data-target="150">0</h2>
+          <p>Proyek Selesai</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 mb-4 mb-lg-0 scroll-reveal" data-delay="100">
+        <div class="stat-box">
+          <h2 class="counter" data-target="95">0</h2>
+          <p>Klien Puas</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 mb-4 mb-lg-0 scroll-reveal" data-delay="200">
+        <div class="stat-box">
+          <h2 class="counter" data-target="50">0</h2>
+          <p>Tim Ahli</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 scroll-reveal" data-delay="300">
+        <div class="stat-box">
+          <h2 class="counter" data-target="10">0</h2>
+          <p>Tahun Pengalaman</p>
+        </div>
       </div>
     </div>
   </div>
@@ -316,9 +385,91 @@
   </div>
 </section>
 
+<!-- Portfolio Section -->
+<section id="portfolio" class="portfolio-section py-5 parallax-section">
+  <div class="parallax-bg-light"></div>
+  <div class="container py-5">
+    <div class="row">
+      <div class="col-12 text-center mb-5 scroll-reveal">
+        <h1 class="mycolor">Portfolio</h1>
+        <h3 class="about-text mb-3">Proyek yang Telah Kami Kerjakan</h3>
+        <p class="p">Lihat beberapa proyek terbaik yang telah kami selesaikan dengan hasil yang memuaskan</p>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-lg-4 col-md-6 mb-4 scroll-reveal" data-delay="0">
+        <div class="portfolio-item">
+          <img src="images/blog-img1.jpg" class="img-fluid" alt="Project 1">
+          <div class="portfolio-overlay">
+            <h5>E-Commerce Website</h5>
+            <p>Website toko online modern dengan fitur lengkap dan payment gateway</p>
+            <a href="#" class="btn-portfolio">Lihat Detail</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-lg-4 col-md-6 mb-4 scroll-reveal" data-delay="100">
+        <div class="portfolio-item">
+          <img src="images/blog-img2.jpg" class="img-fluid" alt="Project 2">
+          <div class="portfolio-overlay">
+            <h5>Mobile Banking App</h5>
+            <p>Aplikasi mobile banking yang aman dengan fitur transfer dan pembayaran</p>
+            <a href="#" class="btn-portfolio">Lihat Detail</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-lg-4 col-md-6 mb-4 scroll-reveal" data-delay="200">
+        <div class="portfolio-item">
+          <img src="images/blog-img3.jpg" class="img-fluid" alt="Project 3">
+          <div class="portfolio-overlay">
+            <h5>Company Profile</h5>
+            <p>Website corporate yang profesional dengan CMS untuk update konten</p>
+            <a href="#" class="btn-portfolio">Lihat Detail</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-lg-4 col-md-6 mb-4 scroll-reveal" data-delay="300">
+        <div class="portfolio-item">
+          <img src="images/team-img1.jpg" class="img-fluid" alt="Project 4">
+          <div class="portfolio-overlay">
+            <h5>Learning Management System</h5>
+            <p>Platform pembelajaran online dengan video conference dan ujian online</p>
+            <a href="#" class="btn-portfolio">Lihat Detail</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-lg-4 col-md-6 mb-4 scroll-reveal" data-delay="400">
+        <div class="portfolio-item">
+          <img src="images/team-img2.jpg" class="img-fluid" alt="Project 5">
+          <div class="portfolio-overlay">
+            <h5>Inventory Management</h5>
+            <p>Sistem manajemen inventory real-time dengan barcode scanning</p>
+            <a href="#" class="btn-portfolio">Lihat Detail</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-lg-4 col-md-6 mb-4 scroll-reveal" data-delay="500">
+        <div class="portfolio-item">
+          <img src="images/team-img3.jpg" class="img-fluid" alt="Project 6">
+          <div class="portfolio-overlay">
+            <h5>Restaurant POS System</h5>
+            <p>Sistem kasir restoran dengan integrasi kitchen display dan online order</p>
+            <a href="#" class="btn-portfolio">Lihat Detail</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- Team Section -->
 <section id="tim" class="team-section py-5 parallax-section">
-  <div class="parallax-bg-light"></div>
+  <div class="parallax-bg"></div>
   <div class="container py-5">
     <div class="row mb-5">
       <div class="col-lg-6 col-md-12 mb-4 mb-lg-0 scroll-reveal" data-reveal="left">
@@ -330,7 +481,8 @@
         <div class="team-member">
           <img class="img-fluid team-img" src="images/team-img1.jpg" alt="Team Member 1">
           <div class="team-overlay">
-            <h5 class="text-white">Developer Senior</h5>
+            <h5 class="text-white">Ahmad Rizki</h5>
+            <p class="text-white-50">Senior Developer</p>
           </div>
         </div>
       </div>
@@ -338,7 +490,8 @@
         <div class="team-member">
           <img class="img-fluid team-img" src="images/team-img2.jpg" alt="Team Member 2">
           <div class="team-overlay">
-            <h5 class="text-white">UI/UX Designer</h5>
+            <h5 class="text-white">Siti Aminah</h5>
+            <p class="text-white-50">UI/UX Designer</p>
           </div>
         </div>
       </div>
@@ -349,7 +502,8 @@
         <div class="team-member">
           <img class="img-fluid team-img" src="images/team-img3.jpg" alt="Team Member 3">
           <div class="team-overlay">
-            <h5 class="text-white">Project Manager</h5>
+            <h5 class="text-white">Budi Santoso</h5>
+            <p class="text-white-50">Project Manager</p>
           </div>
         </div>
       </div>
@@ -357,7 +511,8 @@
         <div class="team-member">
           <img class="img-fluid team-img" src="images/team-img4.jpg" alt="Team Member 4">
           <div class="team-overlay">
-            <h5 class="text-white">Business Analyst</h5>
+            <h5 class="text-white">Dewi Lestari</h5>
+            <p class="text-white-50">Business Analyst</p>
           </div>
         </div>
       </div>
@@ -365,31 +520,80 @@
   </div>
 </section>
 
-<!-- Testimonial Section -->
-<section class="testimonial-section py-5 parallax-section">
-  <div class="parallax-bg"></div>
+<!-- Testimonial Carousel Section -->
+<section id="testimoni" class="testimonial-carousel-section py-5 parallax-section">
+  <div class="parallax-bg-light"></div>
   <div class="container py-5">
-    <div class="row align-items-center">
-      <div class="col-lg-6 col-md-12 mb-4 mb-lg-0 scroll-reveal" data-reveal="left">
-        <div class="developer-image-wrapper">
-          <img class="img-fluid" src="images/feature2-img.png" alt="Developer">
-        </div>
+    <div class="row">
+      <div class="col-12 text-center mb-5 scroll-reveal">
+        <h1 class="mycolor">Testimoni</h1>
+        <h3 class="about-text mb-3">Apa Kata Klien Kami</h3>
+        <p class="p">Kepuasan klien adalah prioritas utama kami</p>
       </div>
-      <div class="col-lg-6 col-md-12 scroll-reveal" data-reveal="right">
-        <h1 class="mycolor">Berita Terkini</h1>
-        <h3 class="about-text mb-4">Karya yang Menakjubkan</h3>
-        <p class="p mb-5">Kami terus berinovasi dan menghadirkan solusi terbaru untuk membantu bisnis Anda bertransformasi digital. Dengan pendekatan yang profesional dan hasil yang terukur, kami berkomitmen memberikan nilai terbaik untuk setiap proyek yang kami kerjakan.</p>
-        
-        <div class="testimonial-card p-4">
-          <div class="d-flex align-items-center mb-3">
-            <img class="webdeveloper me-3" src="images/team-img2.jpg" alt="Chandra Wardhana">
-            <div>
-              <h5 class="fw-bold mb-1">Chandra Wardhana</h5>
-              <p class="text-muted mb-0">Lead Developer</p>
+    </div>
+    
+    <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="testimonial-slide text-center">
+            <img src="images/team-img1.jpg" class="testimonial-avatar mb-3" alt="Client 1">
+            <p class="testimonial-text">"Edammura sangat profesional dalam mengerjakan proyek kami. Hasil melebihi ekspektasi! Tim yang responsif dan komunikatif."</p>
+            <h5 class="fw-bold">Budi Santoso</h5>
+            <p class="text-muted">CEO, PT Teknologi Maju</p>
+            <div class="testimonial-rating">
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
             </div>
           </div>
-          <p class="feature-pa">"Pengalaman mengembangkan solusi digital yang inovatif telah membawa kami untuk terus berkembang dan memberikan yang terbaik bagi klien."</p>
         </div>
+        <div class="carousel-item">
+          <div class="testimonial-slide text-center">
+            <img src="images/team-img2.jpg" class="testimonial-avatar mb-3" alt="Client 2">
+            <p class="testimonial-text">"Kualitas kerja yang luar biasa dan support yang responsif. Sangat recommended untuk yang mencari partner IT terpercaya!"</p>
+            <h5 class="fw-bold">Siti Nurhaliza</h5>
+            <p class="text-muted">Founder, Startup Indonesia</p>
+            <div class="testimonial-rating">
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="testimonial-slide text-center">
+            <img src="images/team-img3.jpg" class="testimonial-avatar mb-3" alt="Client 3">
+            <p class="testimonial-text">"Partnership yang sangat baik. Tim yang kompeten dan selalu siap membantu. Proyek selesai tepat waktu dengan hasil maksimal."</p>
+            <h5 class="fw-bold">Ahmad Rifai</h5>
+            <p class="text-muted">Director, Digital Agency</p>
+            <div class="testimonial-rating">
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-fill text-warning"></i>
+              <i class="bi bi-star-half text-warning"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+      
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active" aria-current="true"></button>
+        <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="2"></button>
       </div>
     </div>
   </div>
@@ -397,7 +601,7 @@
 
 <!-- Blog Section -->
 <section id="blog" class="blog-section py-5 parallax-section">
-  <div class="parallax-bg-light"></div>
+  <div class="parallax-bg"></div>
   <div class="container py-5">
     <div class="row mb-5">
       <div class="col-lg-8 mx-auto text-center scroll-reveal">
@@ -414,8 +618,12 @@
             <img class="w-100 blog-img" src="images/blog-img1.jpg" alt="Blog 1">
           </div>
           <div class="blog-content p-4 bg-white">
-            <h6 class="blog-card-date mb-2">04 Februari, 2025</h6>
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <h6 class="blog-card-date mb-0"><i class="bi bi-calendar3"></i> 04 Februari, 2025</h6>
+              <span class="blog-category">Technology</span>
+            </div>
             <h5 class="blog-card-subtitle">Memulai Transformasi Digital untuk Bisnis Modern</h5>
+            <p class="blog-excerpt">Panduan lengkap untuk memulai transformasi digital di perusahaan Anda dengan strategi yang tepat...</p>
             <a href="#" class="read-more mt-3">Baca Selengkapnya →</a>
           </div>
         </div>
@@ -427,8 +635,12 @@
             <img class="w-100 blog-img" src="images/blog-img2.jpg" alt="Blog 2">
           </div>
           <div class="blog-content p-4 bg-white">
-            <h6 class="blog-card-date mb-2">04 Februari, 2025</h6>
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <h6 class="blog-card-date mb-0"><i class="bi bi-calendar3"></i> 04 Februari, 2025</h6>
+              <span class="blog-category">Trends</span>
+            </div>
             <h5 class="blog-card-subtitle">Tren Teknologi 2025 yang Harus Anda Ketahui</h5>
+            <p class="blog-excerpt">Eksplorasi tren teknologi terbaru yang akan mengubah landscape industri di tahun 2025...</p>
             <a href="#" class="read-more mt-3">Baca Selengkapnya →</a>
           </div>
         </div>
@@ -440,10 +652,122 @@
             <img class="w-100 blog-img" src="images/blog-img3.jpg" alt="Blog 3">
           </div>
           <div class="blog-content p-4 bg-white">
-            <h6 class="blog-card-date mb-2">04 Februari, 2025</h6>
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <h6 class="blog-card-date mb-0"><i class="bi bi-calendar3"></i> 04 Februari, 2025</h6>
+              <span class="blog-category">Business</span>
+            </div>
             <h5 class="blog-card-subtitle">Mengoptimalkan Proses Bisnis dengan Teknologi</h5>
+            <p class="blog-excerpt">Cara efektif menggunakan teknologi untuk meningkatkan efisiensi dan produktivitas bisnis...</p>
             <a href="#" class="read-more mt-3">Baca Selengkapnya →</a>
           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ Section -->
+<section id="faq" class="faq-section py-5 parallax-section">
+  <div class="parallax-bg-light"></div>
+  <div class="container py-5">
+    <div class="row">
+      <div class="col-12 text-center mb-5 scroll-reveal">
+        <h1 class="mycolor">FAQ</h1>
+        <h3 class="about-text mb-3">Pertanyaan yang Sering Diajukan</h3>
+        <p class="p">Temukan jawaban untuk pertanyaan umum tentang layanan kami</p>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        <div class="accordion" id="faqAccordion">
+          
+          <div class="accordion-item mb-3 scroll-reveal" data-delay="0">
+            <h2 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true">
+                <i class="bi bi-question-circle me-2"></i> Berapa lama waktu pengerjaan proyek?
+              </button>
+            </h2>
+            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Waktu pengerjaan tergantung pada kompleksitas proyek. Website sederhana biasanya 2-4 minggu, 
+                sementara aplikasi kompleks bisa 2-6 bulan. Kami akan memberikan estimasi yang jelas di awal proyek 
+                dan update progress secara berkala.
+              </div>
+            </div>
+          </div>
+          
+          <div class="accordion-item mb-3 scroll-reveal" data-delay="100">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                <i class="bi bi-question-circle me-2"></i> Apakah ada garansi setelah proyek selesai?
+              </button>
+            </h2>
+            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Ya, kami memberikan garansi 3-6 bulan untuk bug fixing dan maintenance dasar setelah proyek selesai. 
+                Support berkelanjutan juga tersedia dengan paket khusus yang dapat disesuaikan dengan kebutuhan Anda.
+              </div>
+            </div>
+          </div>
+          
+          <div class="accordion-item mb-3 scroll-reveal" data-delay="200">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                <i class="bi bi-question-circle me-2"></i> Bagaimana sistem pembayaran?
+              </button>
+            </h2>
+            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Sistem pembayaran fleksibel: 30% di awal sebagai down payment, 40% saat development milestone tercapai, 
+                dan 30% saat proyek selesai. Kami menerima transfer bank, e-wallet, dan metode pembayaran lainnya.
+              </div>
+            </div>
+          </div>
+          
+          <div class="accordion-item mb-3 scroll-reveal" data-delay="300">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                <i class="bi bi-question-circle me-2"></i> Apakah bisa request fitur tambahan di tengah proyek?
+              </button>
+            </h2>
+            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Bisa, namun akan ada penyesuaian timeline dan biaya tergantung kompleksitas fitur yang diminta. 
+                Kami akan memberikan estimasi revisi dan mendiskusikan impact terhadap project scope sebelum melanjutkan.
+              </div>
+            </div>
+          </div>
+          
+          <div class="accordion-item mb-3 scroll-reveal" data-delay="400">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                <i class="bi bi-question-circle me-2"></i> Apakah menyediakan layanan maintenance website/aplikasi?
+              </button>
+            </h2>
+            <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Ya, kami menyediakan paket maintenance bulanan dan tahunan yang mencakup update konten, 
+                security updates, bug fixes, dan technical support. Paket dapat disesuaikan dengan kebutuhan spesifik Anda.
+              </div>
+            </div>
+          </div>
+          
+          <div class="accordion-item scroll-reveal" data-delay="500">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6">
+                <i class="bi bi-question-circle me-2"></i> Bagaimana proses konsultasi awal?
+              </button>
+            </h2>
+            <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Konsultasi awal dilakukan secara gratis untuk memahami kebutuhan bisnis Anda. Kami akan menganalisis 
+                requirements, memberikan rekomendasi solusi terbaik, estimasi biaya dan timeline. Konsultasi dapat dilakukan 
+                via online meeting atau tatap muka.
+              </div>
+            </div>
+          </div>
+          
         </div>
       </div>
     </div>
@@ -461,57 +785,94 @@
         <p class="p mb-5">Kami selalu siap membantu dan menjawab kebutuhan Anda. Jangan ragu untuk menghubungi kami kapan saja untuk konsultasi atau diskusi proyek Anda.</p>
         
         <div class="contact-info mb-4">
-          <div class="d-flex align-items-start mb-3">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#6c63ff" class="me-3 flex-shrink-0" viewBox="0 0 16 16">
-              <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
-              <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
-            </svg>
+          <div class="contact-item d-flex align-items-start mb-4">
+            <div class="contact-icon me-3">
+              <i class="bi bi-geo-alt-fill"></i>
+            </div>
             <div>
               <span class="fw-bold black-color d-block mb-1">Alamat</span>
               <span>Magelang, Jawa Tengah, Indonesia</span>
             </div>
           </div>
           
-          <div class="d-flex align-items-start mb-3">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#6c63ff" class="me-3 flex-shrink-0" viewBox="0 0 16 16">
-              <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
-            </svg>
+          <div class="contact-item d-flex align-items-start mb-4">
+            <div class="contact-icon me-3">
+              <i class="bi bi-telephone-fill"></i>
+            </div>
             <div>
               <span class="fw-bold black-color d-block mb-1">Telepon</span>
               <span>+62 812 2773 6439</span>
             </div>
           </div>
           
-          <div class="d-flex align-items-start">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#6c63ff" class="me-3 flex-shrink-0" viewBox="0 0 16 16">
-              <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z"/>
-            </svg>
+          <div class="contact-item d-flex align-items-start mb-4">
+            <div class="contact-icon me-3">
+              <i class="bi bi-envelope-fill"></i>
+            </div>
             <div>
               <span class="fw-bold black-color d-block mb-1">Email</span>
               <span>info@edammura.com</span>
             </div>
+          </div>
+
+          <div class="contact-item d-flex align-items-start">
+            <div class="contact-icon me-3">
+              <i class="bi bi-clock-fill"></i>
+            </div>
+            <div>
+              <span class="fw-bold black-color d-block mb-1">Jam Operasional</span>
+              <span>Senin - Jumat: 09:00 - 17:00 WIB</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="social-media-contact mt-4">
+          <h6 class="fw-bold mb-3">Follow Us:</h6>
+          <div class="d-flex gap-3">
+            <a href="#" class="social-link"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="social-link"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="social-link"><i class="bi bi-twitter"></i></a>
+            <a href="#" class="social-link"><i class="bi bi-linkedin"></i></a>
+            <a href="#" class="social-link"><i class="bi bi-youtube"></i></a>
           </div>
         </div>
       </div>
       
       <div class="col-lg-7 col-md-12 scroll-reveal" data-reveal="right">
         <div class="contact-form-wrapper p-5">
+          <h4 class="fw-bold mb-4">Kirim Pesan</h4>
           <form class="contact-form">
             <div class="row">
               <div class="col-md-6 mb-4">
-                <input type="text" class="form-control" placeholder="Nama Lengkap" required>
+                <label class="form-label">Nama Lengkap *</label>
+                <input type="text" class="form-control" placeholder="Masukkan nama Anda" required>
               </div>
               <div class="col-md-6 mb-4">
-                <input type="email" class="form-control" placeholder="Email" required>
+                <label class="form-label">Email *</label>
+                <input type="email" class="form-control" placeholder="email@example.com" required>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6 mb-4">
+                <label class="form-label">Telepon</label>
+                <input type="tel" class="form-control" placeholder="+62 xxx xxxx xxxx">
+              </div>
+              <div class="col-md-6 mb-4">
+                <label class="form-label">Perusahaan</label>
+                <input type="text" class="form-control" placeholder="Nama perusahaan">
               </div>
             </div>
             <div class="mb-4">
-              <input type="text" class="form-control" placeholder="Subjek" required>
+              <label class="form-label">Subjek *</label>
+              <input type="text" class="form-control" placeholder="Subjek pesan" required>
             </div>
             <div class="mb-4">
-              <textarea class="form-control" rows="5" placeholder="Pesan Anda" required></textarea>
+              <label class="form-label">Pesan *</label>
+              <textarea class="form-control" rows="5" placeholder="Tulis pesan Anda di sini..." required></textarea>
             </div>
-            <button type="submit" class="banner-btn">Kirim Pesan</button>
+            <button type="submit" class="banner-btn w-100">
+              <i class="bi bi-send me-2"></i> Kirim Pesan
+            </button>
           </form>
         </div>
       </div>
@@ -524,13 +885,20 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
-        <h5 class="mycolor-light mb-4">Edammura Software</h5>
-        <p>Solusi teknologi terpercaya untuk transformasi digital bisnis Anda.</p>
+        <h5 class="mycolor-light mb-4">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-code-square me-2" viewBox="0 0 16 16">
+            <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+            <path d="M6.854 4.646a.5.5 0 0 1 0 .708L4.207 8l2.647 2.646a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 0 1 .708 0zm2.292 0a.5.5 0 0 0 0 .708L11.793 8l-2.647 2.646a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708 0z"/>
+          </svg>
+          Edammura Software
+        </h5>
+        <p>Solusi teknologi terpercaya untuk transformasi digital bisnis Anda. Kami berkomitmen memberikan layanan terbaik dengan kualitas internasional.</p>
         <div class="social-links mt-4">
           <a href="#" class="text-white me-3"><i class="bi bi-facebook"></i></a>
           <a href="#" class="text-white me-3"><i class="bi bi-twitter"></i></a>
           <a href="#" class="text-white me-3"><i class="bi bi-instagram"></i></a>
-          <a href="#" class="text-white"><i class="bi bi-linkedin"></i></a>
+          <a href="#" class="text-white me-3"><i class="bi bi-linkedin"></i></a>
+          <a href="#" class="text-white"><i class="bi bi-youtube"></i></a>
         </div>
       </div>
       <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
@@ -539,6 +907,7 @@
           <li class="mb-2"><a href="#beranda" class="text-white-50 hover-link smooth-scroll">Beranda</a></li>
           <li class="mb-2"><a href="#tentang" class="text-white-50 hover-link smooth-scroll">Tentang</a></li>
           <li class="mb-2"><a href="#layanan" class="text-white-50 hover-link smooth-scroll">Layanan</a></li>
+          <li class="mb-2"><a href="#portfolio" class="text-white-50 hover-link smooth-scroll">Portfolio</a></li>
           <li class="mb-2"><a href="#blog" class="text-white-50 hover-link smooth-scroll">Blog</a></li>
         </ul>
       </div>
@@ -549,40 +918,67 @@
           <li class="mb-2"><a href="#" class="text-white-50 hover-link">Mobile Apps</a></li>
           <li class="mb-2"><a href="#" class="text-white-50 hover-link">Digital Marketing</a></li>
           <li class="mb-2"><a href="#" class="text-white-50 hover-link">Konsultasi IT</a></li>
+          <li class="mb-2"><a href="#" class="text-white-50 hover-link">UI/UX Design</a></li>
         </ul>
       </div>
       <div class="col-lg-3 col-md-6">
         <h6 class="mb-4">Newsletter</h6>
-        <p class="text-white-50">Dapatkan update terbaru dari kami</p>
+        <p class="text-white-50">Dapatkan update terbaru dan tips teknologi dari kami</p>
         <form class="newsletter-form">
-          <div class="input-group">
-            <input type="email" class="form-control" placeholder="Email Anda">
+          <div class="input-group mb-3">
+            <input type="email" class="form-control" placeholder="Email Anda" aria-label="Email">
             <button class="btn btn-primary" type="submit">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                <path d="M15.854.146a.5.5 0 0 1 .11.54l-5.819 14.547a.75.75 0 0 1-1.329.124l-3.178-4.995L.643 7.184a.75.75 0 0 1 .124-1.33L15.314.037a.5.5 0 0 1 .54.11ZM6.636 10.07l2.761 4.338L14.13 2.576 6.636 10.07Zm6.787-8.201L1.591 6.602l4.339 2.76 7.494-7.493Z"/>
-              </svg>
+              <i class="bi bi-send"></i>
             </button>
           </div>
         </form>
+        <div class="mt-4">
+          <h6 class="mb-3">Certified Partners</h6>
+          <div class="d-flex gap-2 flex-wrap">
+            <span class="badge bg-secondary">Google Cloud</span>
+            <span class="badge bg-secondary">AWS</span>
+            <span class="badge bg-secondary">Microsoft</span>
+          </div>
+        </div>
       </div>
     </div>
     <hr class="my-4 bg-white opacity-25">
     <div class="row">
-      <div class="col-12 text-center">
+      <div class="col-md-6 text-center text-md-start">
         <p class="mb-0">&copy; 2026 Edammura Software Consultant. Semua Hak Dilindungi.</p>
+      </div>
+      <div class="col-md-6 text-center text-md-end">
+        <a href="#" class="text-white-50 me-3 hover-link">Privacy Policy</a>
+        <a href="#" class="text-white-50 me-3 hover-link">Terms of Service</a>
+        <a href="#" class="text-white-50 hover-link">Sitemap</a>
       </div>
     </div>
   </div>
 </footer>
 
-<!-- Scroll to Top Button -->
-<button id="scrollToTop" class="scroll-to-top">
-  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 16 16">
-    <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/>
-  </svg>
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/6281227736439?text=Halo%20Edammura,%20saya%20tertarik%20dengan%20layanan%20Anda" 
+   class="whatsapp-float" 
+   target="_blank"
+   title="Chat via WhatsApp">
+    <i class="bi bi-whatsapp"></i>
+</a>
+
+<!-- Theme Toggle Button -->
+<button id="themeToggle" class="theme-toggle" title="Toggle Dark/Light Mode">
+    <i class="bi bi-moon-stars-fill"></i>
 </button>
 
+<!-- Scroll to Top Button -->
+<button id="scrollToTop" class="scroll-to-top" title="Back to Top">
+  <i class="bi bi-arrow-up"></i>
+</button>
+
+<!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Custom JS -->
 <script src="js/script.js"></script>
+
 </body>
 </html>

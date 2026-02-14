@@ -856,3 +856,707 @@ body {
 .animate-on-load {
     animation: fadeIn 1s ease;
 }
+
+/* ═══════════════════════════════════════════════════════════════
+   FITUR OPSIONAL - CSS TAMBAHAN
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ───────────────────────────────────────────────────────────────
+   1. PRELOADER
+   ─────────────────────────────────────────────────────────────── */
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #6c63ff 0%, #5a52d5 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 99999;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.preloader.fade-out {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.preloader-content {
+    text-align: center;
+}
+
+.spinner {
+    width: 60px;
+    height: 60px;
+    border: 5px solid rgba(255, 255, 255, 0.3);
+    border-top: 5px solid #ffffff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.preloader-text {
+    margin-top: 25px;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    animation: pulse-text 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse-text {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+
+/* ───────────────────────────────────────────────────────────────
+   2. SCROLL PROGRESS BAR
+   ─────────────────────────────────────────────────────────────── */
+#scrollProgress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #6c63ff, #5a52d5);
+    width: 0%;
+    z-index: 10000;
+    transition: width 0.1s ease;
+    box-shadow: 0 2px 10px rgba(108, 99, 255, 0.5);
+}
+
+
+/* ───────────────────────────────────────────────────────────────
+   3. STATS SECTION
+   ─────────────────────────────────────────────────────────────── */
+.stats-section {
+    background: linear-gradient(135deg, #6c63ff 0%, #5a52d5 100%);
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.stats-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="rgba(255,255,255,0.1)" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,112C672,96,768,96,864,112C960,128,1056,160,1152,165.3C1248,171,1344,149,1392,138.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>') no-repeat bottom;
+    background-size: cover;
+    opacity: 0.3;
+}
+
+.stat-box {
+    position: relative;
+    z-index: 1;
+    padding: 30px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.stat-box:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.stat-box h2 {
+    font-size: 56px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: white !important;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.stat-box p {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.95);
+    margin: 0;
+    font-weight: 500;
+}
+
+.counter {
+    display: inline-block;
+}
+
+
+/* ───────────────────────────────────────────────────────────────
+   4. PORTFOLIO SECTION
+   ─────────────────────────────────────────────────────────────── */
+.portfolio-section {
+    background-color: #f8f9fa;
+}
+
+.portfolio-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    height: 350px;
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.portfolio-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to top, rgba(108, 99, 255, 0.95), rgba(108, 99, 255, 0.7));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    padding: 30px;
+    color: white;
+    text-align: center;
+}
+
+.portfolio-item:hover .portfolio-overlay {
+    opacity: 1;
+}
+
+.portfolio-item:hover img {
+    transform: scale(1.1);
+}
+
+.portfolio-overlay h5 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.portfolio-overlay p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.btn-portfolio {
+    padding: 10px 30px;
+    background: white;
+    color: #6c63ff;
+    border: none;
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.btn-portfolio:hover {
+    background: #f0f0f0;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    color: #5a52d5;
+}
+
+
+/* ───────────────────────────────────────────────────────────────
+   5. TESTIMONIAL CAROUSEL
+   ─────────────────────────────────────────────────────────────── */
+.testimonial-carousel-section {
+    background-color: #f8f9fa;
+}
+
+.testimonial-slide {
+    padding: 60px 40px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.testimonial-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #6c63ff;
+    box-shadow: 0 5px 20px rgba(108, 99, 255, 0.3);
+}
+
+.testimonial-text {
+    font-size: 20px;
+    font-style: italic;
+    color: #666;
+    margin: 35px 0 25px;
+    line-height: 1.8;
+    position: relative;
+}
+
+.testimonial-text::before {
+    content: '"';
+    font-size: 80px;
+    color: #6c63ff;
+    position: absolute;
+    top: -30px;
+    left: -20px;
+    opacity: 0.3;
+    font-family: Georgia, serif;
+}
+
+.testimonial-rating {
+    margin-top: 15px;
+    font-size: 20px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #6c63ff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    transition: all 0.3s ease;
+}
+
+.carousel-control-prev:hover .carousel-control-prev-icon,
+.carousel-control-next:hover .carousel-control-next-icon {
+    background-color: #5a52d5;
+    transform: scale(1.1);
+}
+
+.carousel-indicators button {
+    background-color: #6c63ff;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+
+.carousel-indicators button.active {
+    background-color: #5a52d5;
+    width: 30px;
+    border-radius: 6px;
+}
+
+
+/* ───────────────────────────────────────────────────────────────
+   6. FAQ SECTION
+   ─────────────────────────────────────────────────────────────── */
+.faq-section {
+    background-color: #ffffff;
+}
+
+.accordion-item {
+    border: 2px solid #e0e0e0;
+    margin-bottom: 20px;
+    border-radius: 12px !important;
+    overflow: hidden;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.accordion-item:hover {
+    box-shadow: 0 8px 25px rgba(108, 99, 255, 0.15);
+    border-color: #6c63ff;
+}
+
+.accordion-button {
+    background-color: #fff;
+    color: #1a1a1a;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 20px 25px;
+    border: none;
+}
+
+.accordion-button:not(.collapsed) {
+    background: linear-gradient(135deg, #6c63ff 0%, #5a52d5 100%);
+    color: white;
+    box-shadow: none;
+}
+
+.accordion-button:not(.collapsed) i {
+    color: white;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+    border-color: #6c63ff;
+}
+
+.accordion-button::after {
+    filter: brightness(0) saturate(100%);
+}
+
+.accordion-button:not(.collapsed)::after {
+    filter: brightness(0) saturate(100%) invert(100%);
+}
+
+.accordion-body {
+    padding: 25px;
+    line-height: 1.8;
+    color: #666;
+    font-size: 16px;
+    background: #fafafa;
+}
+
+
+/* ───────────────────────────────────────────────────────────────
+   7. WHATSAPP FLOATING BUTTON
+   ─────────────────────────────────────────────────────────────── */
+.whatsapp-float {
+    position: fixed;
+    bottom: 150px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background: #25d366;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 20px rgba(37, 211, 102, 0.5);
+    z-index: 1000;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    font-size: 32px;
+}
+
+.whatsapp-float:hover {
+    background: #128c7e;
+    color: white;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(37, 211, 102, 0.7);
+}
+
+.whatsapp-float::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border-radius: 50%;
+    border: 2px solid #25d366;
+    animation: pulse-border 1.5s ease-out infinite;
+}
+
+@keyframes pulse-border {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.3);
+        opacity: 0;
+    }
+}
+
+
+/* ───────────────────────────────────────────────────────────────
+   8. THEME TOGGLE (DARK MODE)
+   ─────────────────────────────────────────────────────────────── */
+.theme-toggle {
+    position: fixed;
+    bottom: 90px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #6c63ff 0%, #5a52d5 100%);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    box-shadow: 0 5px 20px rgba(108, 99, 255, 0.4);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    font-size: 20px;
+}
+
+.theme-toggle:hover {
+    transform: translateY(-5px) rotate(15deg);
+    box-shadow: 0 10px 30px rgba(108, 99, 255, 0.6);
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #1a1a2e;
+    color: #eee;
+    transition: all 0.3s ease;
+}
+
+body.dark-mode .navbar-scroll {
+    background-color: rgba(26, 26, 46, 0.95);
+}
+
+body.dark-mode .nav-link {
+    color: #eee !important;
+}
+
+body.dark-mode .nav-link:hover,
+body.dark-mode .nav-link.active {
+    color: #6c63ff !important;
+}
+
+body.dark-mode .banner-text,
+body.dark-mode .about-text,
+body.dark-mode h1, 
+body.dark-mode h2, 
+body.dark-mode h3, 
+body.dark-mode h4, 
+body.dark-mode h5, 
+body.dark-mode h6 {
+    color: #fff;
+}
+
+body.dark-mode .banner-subtitle,
+body.dark-mode .about-subtitle,
+body.dark-mode .p,
+body.dark-mode p {
+    color: #bbb;
+}
+
+body.dark-mode .service-card,
+body.dark-mode .feature-box,
+body.dark-mode .blog-card,
+body.dark-mode .contact-form-wrapper,
+body.dark-mode .feature-item,
+body.dark-mode .portfolio-item,
+body.dark-mode .team-member,
+body.dark-mode .accordion-item,
+body.dark-mode .stat-box {
+    background-color: #16213e;
+    color: #eee;
+    border-color: #2d3561;
+}
+
+body.dark-mode .blog-content,
+body.dark-mode .accordion-body {
+    background-color: #1a2235;
+}
+
+body.dark-mode .parallax-bg,
+body.dark-mode .parallax-bg-light {
+    background: linear-gradient(135deg, #0f3460 0%, #16213e 100%);
+}
+
+body.dark-mode .about-section,
+body.dark-mode .feature-section1,
+body.dark-mode .portfolio-section,
+body.dark-mode .blog-section,
+body.dark-mode .faq-section {
+    background-color: #0f1419;
+}
+
+body.dark-mode .form-control {
+    background-color: #1a2235;
+    color: #eee;
+    border-color: #2d3561;
+}
+
+body.dark-mode .form-control:focus {
+    background-color: #1a2235;
+    color: #eee;
+    border-color: #6c63ff;
+}
+
+body.dark-mode .black-color {
+    color: #fff;
+}
+
+
+/* ───────────────────────────────────────────────────────────────
+   9. CONTACT ENHANCEMENTS
+   ─────────────────────────────────────────────────────────────── */
+.contact-icon {
+    width: 45px;
+    height: 45px;
+    background: linear-gradient(135deg, #6c63ff 0%, #5a52d5 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+    flex-shrink: 0;
+}
+
+.contact-item {
+    transition: all 0.3s ease;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.contact-item:hover {
+    background: rgba(108, 99, 255, 0.05);
+    transform: translateX(10px);
+}
+
+.social-media-contact .social-link {
+    width: 45px;
+    height: 45px;
+    background: rgba(108, 99, 255, 0.1);
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #6c63ff;
+    font-size: 20px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.social-media-contact .social-link:hover {
+    background: #6c63ff;
+    color: white;
+    transform: translateY(-5px);
+}
+
+.form-label {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+body.dark-mode .form-label {
+    color: #eee;
+}
+
+
+/* ───────────────────────────────────────────────────────────────
+   10. BLOG ENHANCEMENTS
+   ─────────────────────────────────────────────────────────────── */
+.blog-category {
+    background: #6c63ff;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.blog-excerpt {
+    color: #666;
+    font-size: 15px;
+    line-height: 1.6;
+    margin: 15px 0;
+}
+
+body.dark-mode .blog-excerpt {
+    color: #bbb;
+}
+
+
+/* ───────────────────────────────────────────────────────────────
+   RESPONSIVE ADJUSTMENTS
+   ─────────────────────────────────────────────────────────────── */
+@media (max-width: 991px) {
+    .testimonial-slide {
+        padding: 40px 20px;
+    }
+    
+    .testimonial-text {
+        font-size: 18px;
+    }
+    
+    .portfolio-item {
+        height: 300px;
+    }
+    
+    .stat-box h2 {
+        font-size: 48px;
+    }
+}
+
+@media (max-width: 767px) {
+    .whatsapp-float {
+        bottom: 120px;
+        right: 20px;
+        width: 55px;
+        height: 55px;
+        font-size: 28px;
+    }
+    
+    .theme-toggle {
+        bottom: 70px;
+        right: 20px;
+        width: 45px;
+        height: 45px;
+        font-size: 18px;
+    }
+    
+    .scroll-to-top {
+        bottom: 20px;
+        right: 20px;
+        width: 45px;
+        height: 45px;
+    }
+    
+    .testimonial-avatar {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .testimonial-text {
+        font-size: 16px;
+        margin: 25px 0 20px;
+    }
+    
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .portfolio-item {
+        height: 250px;
+        margin-bottom: 20px;
+    }
+    
+    .stat-box h2 {
+        font-size: 40px;
+    }
+    
+    .stat-box {
+        padding: 20px;
+    }
+    
+    .accordion-button {
+        font-size: 16px;
+        padding: 15px 20px;
+    }
+}
+
+@media (max-width: 575px) {
+    .stat-box h2 {
+        font-size: 36px;
+    }
+    
+    .stat-box p {
+        font-size: 16px;
+    }
+    
+    .portfolio-overlay h5 {
+        font-size: 20px;
+    }
+    
+    .portfolio-overlay p {
+        font-size: 14px;
+    }
+}
